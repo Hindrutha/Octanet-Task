@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  color: #fff;
+  background-color: #111;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f2c94c;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f2c94c;
+}
+
+.hero {
+  background-image: url('https://i.pinimg.com/736x/51/c9/92/51c992c232e164467ea430128a1e93ba.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 2s ease;
+}
+
+.cta-button {
+  background-color: #f2c94c;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d6af3c;
+}
+
+/* Genres Section */
+.genres {
+  padding: 80px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.genres h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #f2c94c;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.genre-card {
+  background: #2b2b2b;
+  padding: 30px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.genre-card:hover {
+  transform: translateY(-10px);
+}
+
+.genre-card h3 {
+  color: #f2c94c;
+  margin-bottom: 15px;
+}
+
+.genre-card p {
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #000;
+  padding: 30px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
